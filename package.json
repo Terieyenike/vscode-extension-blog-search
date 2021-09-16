@@ -1,0 +1,45 @@
+{
+	"name": "tech-with-catalin-search",
+	"displayName": "Tech with Catalin Search",
+	"description": "Search blog post and open it in a browser",
+	"version": "0.0.1",
+	"icon": "https://cdn.hashnode.com/res/hashnode/image/upload/v1618468266609/ZdvDSWW25.png",
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:tech-with-catalin-search.searchTWCBlog"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "tech-with-catalin-search.searchTWCBlog",
+				"title": "Tech with Catalin Search"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "yarn run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.2.2",
+		"@types/node": "14.x",
+		"@types/vscode": "^1.60.0",
+		"eslint": "^7.27.0",
+		"glob": "^7.1.7",
+		"mocha": "^8.4.0",
+		"typescript": "^4.3.2",
+		"vscode-test": "^1.5.2"
+	},
+	"dependencies": {
+		"axios": "^0.21.4",
+		"fast-xml-parser": "^3.20.0"
+	}
+}
