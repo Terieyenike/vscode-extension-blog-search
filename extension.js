@@ -10,11 +10,12 @@ async function activate(context) {
   const url = 'https://catalins.tech/rss.xml';
   const res = await axios.get(url);
   const posts = xmlParser.parse(res.data).rss.channel.item.map((post) => {
+    const { title, description, link, cover_image } = post;
     return {
-      label: post.title,
-      detail: post.description,
-      link: post.link,
-      date: post.pubDate,
+      label: title,
+      detail: description,
+      link: link,
+      image: cover_image,
     };
   });
 
