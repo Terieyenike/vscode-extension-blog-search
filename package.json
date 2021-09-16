@@ -3,6 +3,9 @@
 	"displayName": "Tech with Catalin Search",
 	"description": "Search blog post and open it in a browser",
 	"version": "0.0.1",
+	"repository": {
+		"url": "https://github.com/Terieyenike/vscode-extension-blog-search"
+	},
 	"icon": "https://cdn.hashnode.com/res/hashnode/image/upload/v1618468266609/ZdvDSWW25.png",
 	"engines": {
 		"vscode": "^1.60.0"
