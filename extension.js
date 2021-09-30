@@ -20,20 +20,21 @@ async function activate(context) {
   });
 
   let disposable = vscode.commands.registerCommand(
-    'tech-with-catalin-search.searchTWCBlog',
+    'blog-search.searchBlog',
     async function () {
       const articles = await vscode.window.showQuickPick(posts, {
         matchOnDetail: true,
-        title: 'Select a title',
-        placeHolder: 'Typing blog post title here...',
+        title: 'Select an article',
+        placeHolder: 'Type blog post title here...',
       });
-      if (articles == null) {
-        vscode.window.showInformationMessage(
-          'Oooops, did you forget to select a post 😳'
-        );
-      } else {
-        vscode.env.openExternal(articles.link);
-      }
+      const date = new Date();
+      const displayDate = date.toLocaleDateString();
+      vscode.window.showInformationMessage(
+        `Top notch articles for today: ${displayDate}`
+      );
+
+      if (articles == null) return;
+      vscode.env.openExternal(articles.link);
     }
   );
 

@@ -1,9 +1,9 @@
 {
-	"name": "tech-with-catalin-search",
+	"name": "blog-search",
 	"displayName": "Tech with Catalin Search",
 	"description": "Search blog post and open it in a browser",
 	"publisher": "TeriEyenike",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"repository": {
 		"url": "https://github.com/Terieyenike/vscode-extension-blog-search"
 	},
@@ -15,14 +15,14 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:tech-with-catalin-search.searchTWCBlog"
+		"onCommand:blog-search.searchBlog"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "tech-with-catalin-search.searchTWCBlog",
-				"title": "Tech with Catalin Search"
+				"command": "blog-search.searchBlog",
+				"title": "Search posts"
 			}
 		]
 	},
